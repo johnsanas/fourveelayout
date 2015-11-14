@@ -1,0 +1,235 @@
+body {
+	font-family: Arial, Helvetica, Sans-Serif;
+	color: #322f2f;
+}
+
+.spacer1{
+	height: 10px;
+}
+.spacer2{
+	height: 20px;
+}
+.spacer3{
+	height: 30px;
+}
+.spacer4{
+	height: 40px;
+}
+.spacer5{
+	height: 50px;
+}
+.spacer6{
+	height: 60px;
+}
+.spacer7{
+	height: 70px;
+}
+.spacer8{
+	height: 80px;
+}
+.spacer9{
+	height: 90px;
+}
+.spacer10{
+	height: 100px;
+}
+.spacer50{
+	height: 500px;
+}
+
+.bg-color{
+	background-color: #eeeeee;
+}
+
+/*NAVIGATION*/
+.header-logo{
+	background-image: url(../img/Logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 165px;
+	height: 50px;
+}
+
+.navbar-brand{
+	padding: 0px;
+}
+
+#header-right{
+	border-bottom: 5px solid #fee202;
+	box-shadow: 5px 5px 5px rgba(112,110,100, 0.5);
+}
+
+#head-article #image{
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-left: 1.5px solid black;
+	border-right: 1.5px solid black;
+	width: 100%;
+	height: 500px;
+}
+
+#head-article #title{
+	font-size: 2.5em;
+}
+
+#head-article #author{
+	color: #908d8d;
+	font-size:  0.9em;
+}
+
+
+#head-article #preview{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 1em;
+}
+
+#head-article #social{
+	font-size:  1.2em;
+	margin-top: 10px;
+	padding-top: 5px;
+	margin-bottom: 10px;
+
+}
+#head-article #social i{
+	width: 90px;
+	text-align: center;
+	color: #ffffff;
+	padding: 3px;
+}
+
+#head-article #social .fa-facebook{
+	background-color: #355693;
+}
+#head-article #social .fa-twitter{
+	background-color: #33ccff;
+}
+#head-article #social .fa-google-plus{
+	background-color: #d95333;
+}
+
+#sub-article{
+	padding-left: 15px;
+	height: 500px;
+}
+#sub-article-bg{
+	height: inherit;
+}
+
+/*line*/
+#line {
+	color: rgba(171,171,171, 0.2);
+	margin: 20px 0px;
+}
+
+.article-container{
+	padding:1px 10px;
+}
+
+#articles{
+	padding: 0px;
+}
+#articles #image{
+	margin-bottom: 10px;
+	margin-top: 20px;
+	width: 100%;
+	height: 450px;
+	background-color: black;
+}
+
+#articles #title{
+	font-size: 2.5em;
+}
+
+#articles #preview{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#articles #author{
+	color: #908d8d;
+	font-size:  0.9em;
+	margin: 5px 0px;
+}
+
+#articles #social{
+	font-size:  1.2em;
+	margin: 10px 0px;	
+}
+#articles #social i{
+	width: 90px;
+	text-align: center;
+	color: #ffffff;
+	padding: 3px;
+}
+
+#articles #social .fa-facebook{
+	background-color: #355693;
+}
+#articles #social .fa-twitter{
+	background-color: #33ccff;
+}
+#articles #social .fa-google-plus{
+	background-color: #d95333;
+}
+
+
+/*sidebar*/
+#sidebar #highlights{
+	font-family: "Myriad Pro";
+	font-size: 1.375em;
+	font-weight: bold;
+	border-bottom: 5px solid #fee30e;
+	width: inherit;
+	margin-bottom: 10px;
+	margin-left: 25%;
+
+}
+
+#sidebar #high {
+	color: #393939;
+	margin-left: 15px;
+}
+
+#sidebar #lights {
+	color: #fee30e;
+	font-style: italic;
+}
+
+#sidebar #highlights-article #image{
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	border-radius: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	float:left;
+	margin-top: 10px;
+}
+
+#sidebar #highlights-article #title{
+	float:left;
+	width: 280px;
+	margin-left: 20px;
+	font-size: 1.2em;
+	margin-top: 10px;
+}
+
+
+#sidebar #highlights-article #preview{
+	float: left;
+	color: #908d8d;
+	font-size: 0.9em;
+	width: 280px;
+	margin-left: 20px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(171,171,171,0.5);
+
+}
+
+/*write a review - canvas*/
+
+#canvas{
+	background-color: black;
+	padding: 20px 10px;
+}
