@@ -158,7 +158,24 @@
 		document.getElementById("add").innerHTML = addTextBox;
 	}
  	
+	function addImage() {
 
+		
+			
+		if ((addTextBox[0]) == null){
+			addTextBox[0] = '<div draggable="true" ondragstart="drag(event)" id="drag1" ><textarea type="text"></textarea></div>';
+
+			document.getElementById("add").innerHTML = addTextBox[0];
+			
+		}else{
+			index+=1;
+			addTextBox[index] = '<div draggable="true" ondragstart="drag(event)" id="drag1"><textarea type="text"></textarea></div>';
+			
+		}
+
+		document.getElementById("add").innerHTML = addTextBox;
+	}
+ 	
 </script>
 <footer>
 
