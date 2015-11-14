@@ -88,33 +88,21 @@
 			    <div class="form-group">        
 			      <div class="col-sm-offset-2 col-sm-10">
 			        <button type="button" class="btn btn-default" onClick="addText()">Add Text</button>
-			        <button type="button" class="btn btn-default">Add Image</button>
+			        <button type="button" class="btn btn-default" onClick="addImage()">Add Image</button>
 			      </div>
 			    </div>
 
 			    <div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
 			    	
-			    	<div id="add"></div>
-			    	<div id="add2"></div>
+			    	<div id="addImage-container"></div>
+			   
 				    <div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
 				    	<div  draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="31">
 				    		<textarea type="text"></textarea>
 				    	</div>
 				    </div>
 
-				     <div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
-				    	<div  draggable="true" ondragstart="drag(event)" id="drag2" width="100" height="31">
-				    		<textarea type="text"></textarea>
-				    	</div>
-				    </div>
-
-				     <div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
-				    	<div  draggable="true" ondragstart="drag(event)" id="drag3" width="100" height="31">
-				    		<textarea type="text"></textarea>
-				    	</div>
-				    </div>
-			    
-					
+			
 
 			    </div>
 
@@ -138,48 +126,19 @@
 </body>
 <script>
 
-	var index = 0;
-	var addTextBox = [];	
+	
 	function addText() {
-
-		
-			
-		if ((addTextBox[0]) == null){
-			addTextBox[0] = '<div draggable="true" ondragstart="drag(event)" id="drag1" ><textarea type="text"></textarea></div>';
-
-			document.getElementById("add").innerHTML = addTextBox[0];
-			
-		}else{
-			index+=1;
-			addTextBox[index] = '<div draggable="true" ondragstart="drag(event)" id="drag1"><textarea type="text"></textarea></div>';
-			
-		}
-
-		document.getElementById("add").innerHTML = addTextBox;
+		var appendTextBox = '<div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)"><div  draggable="true" ondragstart="drag(event)"id="drag3" width="100" height="31"><textarea type="text"></textarea></div></div>';
+		 $("#addImage-container").append(appendTextBox);
 	}
  	
 	function addImage() {
-
-		
-			
-		if ((addTextBox[0]) == null){
-			addTextBox[0] = '<div draggable="true" ondragstart="drag(event)" id="drag1" ><textarea type="text"></textarea></div>';
-
-			document.getElementById("add").innerHTML = addTextBox[0];
-			
-		}else{
-			index+=1;
-			addTextBox[index] = '<div draggable="true" ondragstart="drag(event)" id="drag1"><textarea type="text"></textarea></div>';
-			
-		}
-
-		document.getElementById("add").innerHTML = addTextBox;
+		var image = '<div draggable="true" ondragstart="drag(event)" id="drag1" ><input type="file"></div>';
+		 $("#addImage-container").append(image);
 	}
  	
 </script>
 <footer>
-
-
 
 </footer>
 
