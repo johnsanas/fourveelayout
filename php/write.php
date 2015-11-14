@@ -96,17 +96,24 @@
 			    	
 			    	<div id="add"></div>
 			    	<div id="add2"></div>
-			    	<div  draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="31">
-			    		<textarea type="text"></textarea>
-			    	</div>
+				    <div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
+				    	<div  draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="31">
+				    		<textarea type="text"></textarea>
+				    	</div>
+				    </div>
 
-			    	<div  draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="31">
-			    		<textarea type="text"></textarea>
-			    	</div>
-			    	<div  draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="31">
-			    		<textarea type="text"></textarea>
-			    	</div>
-			    	
+				     <div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
+				    	<div  draggable="true" ondragstart="drag(event)" id="drag2" width="100" height="31">
+				    		<textarea type="text"></textarea>
+				    	</div>
+				    </div>
+
+				     <div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
+				    	<div  draggable="true" ondragstart="drag(event)" id="drag3" width="100" height="31">
+				    		<textarea type="text"></textarea>
+				    	</div>
+				    </div>
+			    
 					
 
 			    </div>
@@ -138,13 +145,13 @@
 		
 			
 		if ((addTextBox[0]) == null){
-			addTextBox[0] = '<div draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="31"><textarea type="text"></textarea></div>';
+			addTextBox[0] = '<div draggable="true" ondragstart="drag(event)" id="drag1" ><textarea type="text"></textarea></div>';
 
 			document.getElementById("add").innerHTML = addTextBox[0];
 			
 		}else{
 			index+=1;
-			addTextBox[index] = '<div draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="31"><textarea type="text"></textarea></div>';
+			addTextBox[index] = '<div draggable="true" ondragstart="drag(event)" id="drag1"><textarea type="text"></textarea></div>';
 			
 		}
 
