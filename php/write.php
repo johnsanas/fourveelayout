@@ -26,11 +26,6 @@
 	}
 	</script>
 
-	<style>
-
-		#div1, #div2
-{float:left; width:100px; height:35px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
-	</style>
 </head>
 <body>
 
@@ -52,8 +47,8 @@
 	    <div class="col-sm-8" id="header-right">
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
-		      	<li class="active"><a href="#">Write a Review</a></li>
-		        <li><a href="#">News</a></li> 
+		      	<li class="active"><a href="#">Write Your Review</a></li>
+		        <li><a href="../index.php">News</a></li> 
 		        <li><a href="#">Reviews</a></li> 
 		        <li><a href="#">Entertainment</a></li> 
 		        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -69,19 +64,19 @@
  	<div class="row" >
  		<div class="col-sm-10 bg-color">
  			<h2>Write A Review</h2>
- 			 <form class="form-horizontal" role="form">
+ 			 <form class="form-horizontal" role="form" method="get" action="success.php">
 			
 			    <div class="form-group">
 			      <label class="control-label col-sm-2">Title:</label>
 			      <div class="col-sm-10">          
-			        <input type="text" class="form-control" id="pwd" placeholder="Title">
+			        <input type="text" class="form-control"  placeholder="Title" name="title">
 			      </div>
 			    </div>
 
 			     <div class="form-group">
 			      <label class="control-label col-sm-2">Embed Youtube Video</label>
 			      <div class="col-sm-10">          
-			        <input type="text" class="form-control" id="pwd" placeholder="Embed here">
+			        <input type="text" class="form-control" id="pwd" placeholder="Embed here" name="embed">
 			      </div>
 			    </div>
 
@@ -98,15 +93,11 @@
 			   
 				    <div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
 				    	<div  draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="31">
-				    		<textarea type="text"></textarea>
+				    		<textarea type="text" name="article"></textarea>
 				    	</div>
 				    </div>
 
-			
-
 			    </div>
-
-
 
 			    <div class="form-group">        
 			      <div class="col-sm-offset-2 col-sm-10">
@@ -116,7 +107,25 @@
 			  </form>
 
  		</div>
- 		<div class="col-sm-2"></div>
+ 		<div class="col-sm-2">
+ 			<div class="col-sm-12 write-sidebar bg-color">
+
+ 				<div class="col-sm-12">
+	 				To make text <b>bold</b>. Insert &ltb&gt &lt/b&gt between text.
+	 				<div>e.g. <div>&ltb&gt <b>This is a bold text.</b> &lt/b&gt </div></div>
+ 				</div>
+
+ 				<div class="col-sm-12">
+	 				To make an <i>italize</i> text. Insert &lti&gt &lt/i&gt between text.
+	 				<div>e.g. <div>&lti&gt <i>This is italize text.</i> &lt/i&gt </div></div>
+ 				</div>
+
+ 				<div class="col-sm-12">Tip: You can embed your youtube video here</div>
+
+ 				<div class="col-sm-12">Tip: You can drag to the bottom right corner of textbox to extend its height  </div>
+
+ 			</div>
+ 		</div>
  	</div>
  </div>
 
@@ -128,7 +137,7 @@
 
 	
 	function addText() {
-		var appendTextBox = '<div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)"><div  draggable="true" ondragstart="drag(event)"id="drag3" width="100" height="31"><textarea type="text"></textarea></div></div>';
+		var appendTextBox = '<div class="col-sm-12" id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)"><div  draggable="true" ondragstart="drag(event)"id="drag3" width="100" height="31"><textarea type="text"  name="article"></textarea></div></div>';
 		 $("#addImage-container").append(appendTextBox);
 	}
  	

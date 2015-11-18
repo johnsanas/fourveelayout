@@ -32,8 +32,8 @@
 	    <div class="col-sm-8" id="header-right">
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right">
-		      	<li><a href="php/write.php">Write a Review</a></li>
-		        <li><a href="#">News</a></li> 
+		      	<li><a href="php/write.php">Write Your Review</a></li>
+		        <li class="active"><a href="#">News</a></li> 
 		        <li><a href="#">Reviews</a></li> 
 		        <li><a href="#">Entertainment</a></li> 
 		        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
