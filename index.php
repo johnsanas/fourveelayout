@@ -2,13 +2,14 @@
 
 $con = mysqli_connect("localhost","root","","fourvee");
 
-$query = "SELECT * FROM articles where (day(now()) - day(datepublished) < 3 ) order by datepublished limit 1";
+//$query = "SELECT * FROM articles where (day(now()) - day(datepublished) < 3 ) order by datepublished limit 1";
+$query = "SELECT * FROM articles where article_id = 15 ";
 $result = mysqli_query($con,$query);
 $featured = mysqli_fetch_assoc($result);
 
 //limits the preview text on article 
 $countString = strlen($featured['article']);
-$limitString = $countString * 0.5;
+$limitString = $countString * 0.75;
 
 
 ?>

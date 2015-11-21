@@ -64,7 +64,7 @@
  	<div class="row" >
  		<div class="col-sm-10 bg-color">
  			<h2>Write A Review</h2>
- 			 <form class="form-horizontal" role="form" method="get" action="success.php">
+ 			 <form class="form-horizontal" role="form" method="post" action="success.php" enctype="multipart/form-data">
 			
 			    <div class="form-group">
 			      <label class="control-label col-sm-2">Title:</label>
@@ -98,10 +98,9 @@
 				    </div>
 
 			    </div>
-
 			    <div class="form-group">        
 			      <div class="col-sm-offset-2 col-sm-10">
-			        <button type="submit" class="btn btn-default">Submit</button>
+			        <button type="submit" class="btn btn-default" name="btn-upload">Submit</button>
 			      </div>
 			    </div>
 			  </form>
@@ -129,9 +128,6 @@
  	</div>
  </div>
 
-
-
-
 </body>
 <script>
 
@@ -142,7 +138,7 @@
 	}
  	
 	function addImage() {
-		var image = '<div draggable="true" ondragstart="drag(event)" id="drag1" ><input type="file"></div>';
+		var image = '<div draggable="true" ondragstart="drag(event)" id="drag1" ><input type="file" name="file"></div>';
 		 $("#addImage-container").append(image);
 	}
  	
