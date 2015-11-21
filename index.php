@@ -1,3 +1,17 @@
+<?php 
+
+$con = mysqli_connect("localhost","root","","fourvee");
+
+$query = "SELECT * FROM articles where (day(now()) - day(datepublished) < 3 ) order by datepublished limit 1";
+$result = mysqli_query($con,$query);
+$featured = mysqli_fetch_assoc($result);
+
+//limits the preview text on article 
+$countString = strlen($featured['article']);
+$limitString = $countString * 0.5;
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,31 +48,44 @@
 		      <ul class="nav navbar-nav navbar-right">
 		      	<li><a href="php/write.php">Write Your Review</a></li>
 		        <li class="active"><a href="#">News</a></li> 
-		        <li><a href="#">Reviews</a></li> 
+		        <li><a href="php/review.php">Reviews</a></li> 
 		        <li><a href="#">Entertainment</a></li> 
 		        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 		        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 		      </ul>
 		    </div>
 	     </div>
-
 </nav>
 
 <!--body-->
  <div class="container">
  	<div class="row" >
  		<div class="col-sm-8 bg-color" id="head-article">
- 			<div id="image"  ></div>
- 			<div id="title"><a href="#"><h1>What to expect from Microsoft's Windows 10 device event</h1></a></div>
- 			<div id="author">by Erhik Vergaram | 2015-10-22 15:01:21</div>
-			<div id="preview">Microsoft may be tight-lipped about what will be revealed at its October 6th device event, but that doesn't mean that everything is a mystery. In some cases, a slew of leaks have telegraphed Redmond's plans in advance. More Lumia phones, anyone? However, there are still a few questions left. What about the fabled Surface Pro 4? When does Windows 10 reach your existing phone? And will there be any wearable tech? We'll answer as many of those questions as we can so that you have a good idea of what to expect when Microsoft's execs take the stage.</div>
+ 			<div id="image"  <?php echo "style='background-image: url("; ?> <?php echo 'data:image/jpeg;base64,'.base64_encode( $featured['image'] ).'' . ");'"; ?> ></div>
+ 			<div id="title"><a href="php/review.php?article_id=<?php echo $featured['article_id']; ?>"><h1><?php  echo $featured['title']; ?></h1></a></div>
+ 			<div id="author"><?php  echo "by " .$featured['author'] ." | "; ?><span><?php  echo $featured['datepublished']; ?></span></div>
+			<div id="preview"><?php echo substr($featured['article'], 0 ,$limitString); ?></div>
+			<div id="social">
+				<i class="fa fa-facebook"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-google-plus"></i>	
+			</div>
+ 		</div>	
+
+ 		<!--
+	     <div>
+	     	<div id="image" <?php echo "style='background-image: url("; ?> <?php echo 'data:image/jpeg;base64,'.base64_encode( $featured['image'] ).'' . ");'"; ?> ></div>
+			<div id="title"><a href="php/page.php"><?php  echo $featured['title']; ?></a></div>
+			<div id="author"><?php  echo "by " .$featured['author'] ." | "; ?><span><?php  echo $featured['datepublished']; ?></span></div>
+			<div id="preview"><?php echo substr($featured['article'], 0 ,$limitString); ?></div>
 			<div id="social">
 				<i class="fa fa-facebook"></i>
 				<i class="fa fa-twitter"></i>
 				<i class="fa fa-google-plus"></i>
 			</div>
- 		</div>
- 		
+
+	     </div>
+		-->
 
  		<div class="col-sm-4" id="sub-article">
  			<div class="bg-color" id="sub-article-bg"></div>
@@ -103,10 +130,17 @@
  	</div>
 
  </div>
+<script>
 
 
+	function viewReview(article_id) {
+		
+		<?php $_SESSION['article_id'] = 1; ?>
+		  
 
-
-
+	}
+ 
+ 	
+</script>
 </body>
 </html>

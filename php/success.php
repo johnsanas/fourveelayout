@@ -1,14 +1,16 @@
  <?php 
 
-$title = $_GET['title'];	
+$title = $_GET["title"];
+$title = htmlspecialchars($title);
+
 $embed = $_GET['embed'];
 $article = $_GET['article'];
 $author = "John Villete";
 
 $con = mysqli_connect("localhost","root","","fourvee");
 
-$sql = "INSERT INTO articles(title,embed_link,author,description,datepublished)
-VALUES('$title','$embed','$author','$article','now()')";
+$sql = "INSERT INTO articles(title,author,description)
+VALUES('$title','$author','$article')";
 
 if (mysqli_query($con,$sql)){
 	echo "<h2>Your article is successfully created !</h2>";
